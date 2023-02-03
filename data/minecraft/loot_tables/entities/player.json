@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "killer",
+              "lore": [
+                {
+                  "text": "Killed by ",
+                  "italic": false,
+                  "extra": [
+                    {
+                      "selector": "@s",
+                      "color": "gold",
+                      "italic": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player",
+          "inverse": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 10,
+    "description": "Makes players drop their head when killed by another player"
+  }
+}
